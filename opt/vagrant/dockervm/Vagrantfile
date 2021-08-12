@@ -19,6 +19,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 2375, host: 2375
   config.vm.network "forwarded_port", guest: 6379, host: 6379
   config.vm.network "forwarded_port", guest: 6000, host: 6000
+  config.vm.network "forwarded_port", guest: 3306, host: 3306
   config.vm.disk :disk, size: "120GB", primary: true
 
   config.vm.provider "virtualbox" do |v|
